@@ -6,17 +6,9 @@
 
     <ul class="items">
         <tal:loop tal:repeat="banner banners">
-
             <li class="portal-banner">
-                <div class="bannerImage">
-                    <img tal:attributes="src string:${banner/absolute_url}" />
-                </div>
-
-                <div class="bannerText">
-                    <div class="bannerTitle" tal:content="banner/Title"></div>
-                 </div>
+                <img tal:attributes="src string:${banner/absolute_url}" />
             </li>
-
         </tal:loop>
 
     </ul>
