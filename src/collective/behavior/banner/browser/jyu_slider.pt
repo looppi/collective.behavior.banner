@@ -1,0 +1,36 @@
+<div id="portal-slider"
+     class="scroll"
+     tal:define="banners view/banners | nothing"
+     tal:condition="python: banners"
+     i18n:domain="collective.behavior.banner">
+
+    <ul class="items">
+        <tal:loop tal:repeat="banner banners">
+
+            <li class="portal-banner">
+                <div class="bannerImage">
+                    <img tal:attributes="src string:${banner/absolute_url}" />
+                </div>
+
+                <div class="bannerText">
+                    <div class="bannerTitle" tal:content="banner/Title"></div>
+                 </div>
+            </li>
+
+        </tal:loop>
+
+    </ul>
+
+<script type="application/javascript">
+$(document).ready(function() {
+
+  $(function() {
+    $(".items").responsiveSlides({
+        speed: 700,
+        timeout: 6000
+    });
+  });
+
+});
+</script>
+</div>
