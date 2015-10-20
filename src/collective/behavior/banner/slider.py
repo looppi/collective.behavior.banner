@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from collective.behavior.banner import _
-from collective.behavior.banner.banner import IBanner
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
 from plone.directives import form
@@ -10,6 +9,7 @@ from plone.supermodel import model
 from z3c.relationfield.schema import RelationChoice, RelationList
 from zope.component import adapts
 from zope.interface import alsoProvides, implements
+from plone.app.contenttypes.interfaces import IImage
 
 
 class ISlider(model.Schema):
@@ -31,7 +31,7 @@ class ISlider(model.Schema):
         value_type=RelationChoice(
             title=_(u'Target'),
             source=ObjPathSourceBinder(
-                object_provides=IBanner.__identifier__,
+                object_provides=IImage.__identifier__,
             )),
         required=False,
     )
