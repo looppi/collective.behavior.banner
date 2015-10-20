@@ -4,12 +4,6 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="collective.behavior.banner">
 
-    <!-- Publish static files -->
-    <browser:resourceDirectory
-      name="collective.behavior.banner"
-      directory="static"
-      />
-
     <browser:viewlet
       name="collective.sliderviewlet"
       for="plone.dexterity.interfaces.IDexterityContent"
