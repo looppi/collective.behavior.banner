@@ -11,21 +11,14 @@
       />
 
     <browser:viewlet
-      name="collective.bannerviewlet"
+      name="collective.sliderviewlet"
       for="plone.dexterity.interfaces.IDexterityContent"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      class=".viewlets.BannerViewlet"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+      class=".viewlets.SliderViewlet"
       layer="..interfaces.ICollectiveBannerLayer"
       permission="zope2.View"
       />
 
     <include package="Products.CMFCore" file="permissions.zcml" />
-
-    <browser:page
-        name="banner_configlet"
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        class=".controlpanel.BannerSettingsControlPanel"
-        permission="cmf.ManagePortal"
-        />
 
 </configure>
