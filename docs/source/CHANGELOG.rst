@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3 (unreleased)
+0.1 (2015-10-21)
 ----------------
 
 - base implementation for JYU
