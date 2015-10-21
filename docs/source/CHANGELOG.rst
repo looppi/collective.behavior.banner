@@ -1,7 +1,12 @@
-:orphan:
-
 Changelog
 =========
+
+0.3 (unreleased)
+----------------
+
+- base implementation for JYU
+  [tnaakka]
+
 
 0.2 (unreleased)
 ----------------
